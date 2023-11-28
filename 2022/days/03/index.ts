@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { argv } from "node:process";
 
 const priorities = [
   "a",
@@ -61,7 +62,7 @@ function isIncluded(arr: string[], item: string): boolean {
 }
 
 function part_1() {
-  const file = readFileSync(path.resolve(__dirname, "input.txt"), "utf-8");
+  const file = readFileSync(path.resolve(__dirname, argv[2]), "utf-8");
   const input = file.split("\n");
 
   let acc = 0;
@@ -80,7 +81,7 @@ function part_1() {
 }
 
 function part_2() {
-  const file = readFileSync(path.resolve(__dirname, "input.txt"), "utf-8");
+  const file = readFileSync(path.resolve(__dirname, argv[2]), "utf-8");
   const input = file.split("\n");
 
   let acc = 0;

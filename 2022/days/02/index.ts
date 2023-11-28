@@ -1,5 +1,6 @@
-import { readFileSync } from "fs";
-import path from "path";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { argv } from "node:process";
 
 type Play = "ROCK" | "PAPER" | "SCISSORS";
 type Result = "LOSE" | "DRAW" | "WIN";
@@ -66,7 +67,7 @@ function part_2(opponent: string, you: string): number {
 }
 
 function main(part: 1 | 2) {
-  const file = readFileSync(path.resolve(__dirname, "input.txt"), "utf-8");
+  const file = readFileSync(path.resolve(__dirname, argv[2]), "utf-8");
   const input = file.split("\n");
 
   let acc = 0;

@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "day:sample": "tsx days/$npm_config_aoc/ sample.txt",
+    "day:input": "tsx days/$npm_config_aoc/ input.txt",
+    "day:generate": "mkdir days/$npm_config_aoc && cp -R templates/day/ days/$npm_config_aoc/"
   },
   "author": "Diogo M. Costa",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.9.4",
+    "tsx": "^4.6.0",
     "typescript": "^5.3.2"
   }
 }
