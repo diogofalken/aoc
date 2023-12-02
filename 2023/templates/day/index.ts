@@ -21,4 +21,4 @@ function part_2() {
 }
 
 part_1();
-part_2();
+// part_2();
